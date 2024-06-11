@@ -1,0 +1,32 @@
+<?php
+/** @var \Lotsofpixels\ReadXml\Block\Adminhtml\System\Config\Form\Version $block */
+?>
+    <div style="">
+        <table style="width:100%; border-bottom: 1px solid #cccccc">
+            <tr>
+                <td style="width: 55%"><img src="<?php echo $block->getVendorLogo(); ?>"></td>
+                <td style="width: 45%">
+                    <table class="form-list">
+                        <colgroup class="label"></colgroup>
+                        <colgroup class="value"></colgroup>
+                        <colgroup class="scope-label"></colgroup>
+
+                        <tbody>
+                        <tr id="row_lotsofpixels_version">
+                            <td style="padding: 0px 15px 0 0;"><label
+                                        for="lotsofpixels_version"><span>Version: </span></label></td>
+                            <td class="value"><?= $block->getversionNumber(); ?></td>
+                            <td class=""></td>
+                        </tr>
+                        <tr id="row_tinxit_b2bpricing_release">
+                            <td style="padding: 0px 15px 0 0;"><label
+                                        for="lotsofpixels_release"><span>Release: </span></label></td>
+                            <td class="value"><?= $block->getreleaseDate(); ?></td>
+                            <td class=""></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>

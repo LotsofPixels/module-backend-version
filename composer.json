@@ -1,0 +1,21 @@
+{
+  "name": "lotsofpixels/module-backend-version",
+  "version": "1.0.0",
+  "description": "",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "php": "~8.0|~8.1|8.2|8.3"
+  },
+  "license": [
+    "Open Software License (OSL)"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Lotsofpixels\\ReadXml\\": ""
+    }
+  }
+}
