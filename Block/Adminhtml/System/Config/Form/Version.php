@@ -28,9 +28,9 @@ class Version extends Template implements RendererInterface
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        Template\Context                                   $context,
-        Repository                                         $moduleAssetDir,
-        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
+        Template\Context     $context,
+        Repository           $moduleAssetDir,
+        ScopeConfigInterface $scopeConfig,
     )
     {
         $this->_template = 'Lotsofpixels_ReadXml::system/config/version.phtml';
@@ -43,7 +43,7 @@ class Version extends Template implements RendererInterface
      * @param AbstractElement $element
      * @return string
      */
-    public function render(AbstractElement $element)
+    public function render(AbstractElement $element): string
     {
         $_element = $element;
         return $this->toHtml();
@@ -52,7 +52,7 @@ class Version extends Template implements RendererInterface
     /**
      * @return string
      */
-    public function getVendorLogo()
+    public function getVendorLogo(): string
     {
         return $this->moduleAssetDir->getUrl("Lotsofpixels_ReadXml::images/lotsofpixels.png");
     }
@@ -60,7 +60,7 @@ class Version extends Template implements RendererInterface
     /**
      * @return mixed
      */
-    public function getversionNumber()
+    public function getversionNumber(): mixed
     {
         $path = 'lostofpixels_version/details/version';
         return $this->scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE);
@@ -69,7 +69,7 @@ class Version extends Template implements RendererInterface
     /**
      * @return mixed
      */
-    public function getreleaseDate()
+    public function getreleaseDate(): mixed
     {
         $path = 'lostofpixels_version/details/last_update';
         return $this->scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE);
